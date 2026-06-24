@@ -1,0 +1,207 @@
+/* ------------------------------------------------------------------ */
+/* Hero — redesigned centered layout                                   */
+/* ------------------------------------------------------------------ */
+
+.hero-new {
+    padding: 5rem 2rem 5rem;
+    text-align: center;
+    background: var(--paper);
+}
+
+.hero-new-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Badge */
+.hero-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e8f5ee;
+    color: #2e7d53;
+    border: 1px solid #c3e6d0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.hero-badge-pill-dot {
+    width: 7px;
+    height: 7px;
+    background: #2e7d53;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Title */
+.hero-new-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+}
+
+.hero-new-title-green {
+    color: var(--accent);
+    display: block;
+}
+
+/* Subtitle */
+.hero-new-subtitle {
+    font-size: 1.1rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Buttons */
+.hero-new-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.btn-hero-dark {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-hero-dark:hover { background: #2d2d2d; color: #fff; }
+
+/* ------------------------------------------------------------------ */
+/* Dashboard window mockup                                             */
+/* ------------------------------------------------------------------ */
+
+.dash-window {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.08);
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.dash-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.9rem 1.25rem;
+}
+
+.dash-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dash-red    { background: #ff5f57; }
+.dash-yellow { background: #ffbd2e; }
+.dash-green  { background: #28c840; }
+
+.dash-content {
+    padding: 0 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Stats row */
+.dash-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.dash-stat {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.dash-stat-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+}
+
+.dash-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.dash-stat-sub {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+}
+
+.dash-stat-sub--red   { color: #c0392b; }
+.dash-stat-sub--green { color: #2e7d53; }
+
+/* Bars section */
+.dash-bars-section {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dash-bar-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dash-bar-label {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    text-align: right;
+}
+
+.dash-bar-track {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.dash-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+    .hero-new-actions { flex-direction: column; align-items: center; }
+    .dash-stats-row { grid-template-columns: 1fr; }
+}
